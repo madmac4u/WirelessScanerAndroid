@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">WirelessScannerAndroid</string>
+    <string name="app_name">WirelessScanner</string>
+    <string name="welcomeTextMessage">Welcome to Wireless Scanner</string>
+    <string name="btnGetAPmessage">Get Access Point</string>
+    <string name="btnGetClientMessage">Get Wireless Clients</string>
+    <string name="btnOtherDevicesMessage">Other Wireless Devices</string>
 </resources>
