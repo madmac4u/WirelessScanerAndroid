@@ -52,6 +52,7 @@ public class ClientFragment extends Fragment implements RecyclerAdapter.OnItemCl
                 recyclerView.setAdapter(recyclerAdapter);
                 recyclerAdapter.setOnItemClickListener(ClientFragment.this::onItemClick);
                 recyclerView.addItemDecoration(dividerItemDecoration);
+                recyclerAdapter.notifyDataSetChanged();
 
             }
         });

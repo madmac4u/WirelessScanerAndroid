@@ -52,6 +52,7 @@ public class OtherFragment extends Fragment implements RecyclerAdapter.OnItemCli
                 recyclerView.setAdapter(recyclerAdapter);
                 recyclerAdapter.setOnItemClickListener(OtherFragment.this::onItemClick);
                 recyclerView.addItemDecoration(dividerItemDecoration);
+                recyclerAdapter.notifyDataSetChanged();
 
             }
         });

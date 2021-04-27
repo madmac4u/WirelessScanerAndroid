@@ -60,6 +60,7 @@ public class BackgroundTask {
                                 );
 
                         char macAddressRandomization = jsonObject.getString("kismet.device.base.macaddr").charAt(1);
+                        // code to filter out randomely generated mac addresses by different devices
                         if(macAddressRandomization == 'A' || macAddressRandomization == '2' ||macAddressRandomization == 'E' || macAddressRandomization == '6'){
 
                         }else {

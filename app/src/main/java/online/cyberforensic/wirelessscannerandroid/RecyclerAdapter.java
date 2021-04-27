@@ -60,7 +60,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView name, manuf,type,mac;
+        TextView name, manuf,type,mac,signal;
         RelativeLayout relativeLayout;
 
 

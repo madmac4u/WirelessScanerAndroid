@@ -54,6 +54,7 @@ public class AdHocFragment extends Fragment implements RecyclerAdapter.OnItemCli
                 recyclerView.setAdapter(recyclerAdapter);
                 recyclerAdapter.setOnItemClickListener(AdHocFragment.this::onItemClick);
                 recyclerView.addItemDecoration(dividerItemDecoration);
+                recyclerAdapter.notifyDataSetChanged();
 
             }
         });

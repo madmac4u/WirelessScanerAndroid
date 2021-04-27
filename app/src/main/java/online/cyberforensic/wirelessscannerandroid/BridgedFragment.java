@@ -52,6 +52,7 @@ public class BridgedFragment extends Fragment implements RecyclerAdapter.OnItemC
                 recyclerView.setAdapter(recyclerAdapter);
                 recyclerAdapter.setOnItemClickListener(BridgedFragment.this::onItemClick);
                 recyclerView.addItemDecoration(dividerItemDecoration);
+                recyclerAdapter.notifyDataSetChanged();
 
             }
         });

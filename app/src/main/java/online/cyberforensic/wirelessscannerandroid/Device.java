@@ -1,8 +1,13 @@
 package online.cyberforensic.wirelessscannerandroid;
 
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Device {
     private String name, manuf,type,mac;
+
+
 
     public Device(String name, String manuf, String type, String mac) {
         this.name = name;
@@ -10,6 +15,8 @@ public class Device {
         this.type = type;
         this.mac = mac;
     }
+
+
 
     public String getType() {
         return type;

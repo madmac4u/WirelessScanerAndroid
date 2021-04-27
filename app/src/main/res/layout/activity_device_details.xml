@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DeviceDetails"
-    android:background="@color/black"
+    android:background="@color/white"
     android:id="@+id/deviceDetailsLayout">
 
     <TextView
@@ -14,10 +14,12 @@
         android:text="Selected Device"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:id="@+id/deviceType"/>
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selected Device"
@@ -27,6 +29,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/deviceName"/>
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selected Device"
@@ -36,6 +39,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/deviceMac"/>
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selected Device"
@@ -44,6 +48,16 @@
         android:layout_below="@+id/deviceMac"
         android:layout_centerHorizontal="true"
         android:id="@+id/deviceManuf"/>
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device Signal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/deviceManuf"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/deviceSignal"/>
 
 
 </RelativeLayout>

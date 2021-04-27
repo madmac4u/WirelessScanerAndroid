@@ -22,6 +22,7 @@ public class DeviceDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getSupportActionBar().hide();
         setContentView(R.layout.activity_device_details);
         deviceType = findViewById(R.id.deviceType);
         deviceName = findViewById(R.id.deviceName);
@@ -31,11 +32,6 @@ public class DeviceDetails extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-
-        if(intent.getStringExtra(EXTRA_DEVICE_TYPE).contains("AP"))
-        {
-            deviceDetailsLayout.setBackgroundColor(Color.CYAN);
-        }
 
         deviceType.setText(intent.getStringExtra(EXTRA_DEVICE_TYPE));
         deviceName.setText(intent.getStringExtra(EXTRA_DEVICE_NAME));
