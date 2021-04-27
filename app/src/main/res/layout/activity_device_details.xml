@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeviceDetails"
+    android:background="@color/black"
+    android:id="@+id/deviceDetailsLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Device"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/deviceType"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Device"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/deviceType"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/deviceName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Device"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/deviceName"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/deviceMac"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Device"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/deviceMac"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/deviceManuf"/>
+
+
+</RelativeLayout>

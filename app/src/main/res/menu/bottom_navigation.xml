@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_ap"
+        android:icon="@drawable/ic_ap"
+        android:title="AP"/>
+
+    <item
+        android:id="@+id/nav_client"
+        android:icon="@drawable/ic_client"
+        android:title="Client"/>
+
+    <item
+        android:id="@+id/nav_other"
+        android:icon="@drawable/ic_other"
+        android:title="Other"/>
+
+    <item
+        android:id="@+id/nav_bridged"
+        android:icon="@drawable/ic_bridged"
+        android:title="Bridged"/>
+
+    <item
+        android:id="@+id/nav_ad_hoc"
+        android:icon="@drawable/ic_ad_hoc"
+        android:title="Ad-Hoc"/>
+
+
+</menu>

@@ -6,52 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_marginTop="50dp"
-        android:id="@+id/welcomeMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcomeTextMessage"
-        android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:padding="5dp"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"/>
 
-    <Button
-        android:id="@+id/btnAP"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnClient"
-        android:text="@string/btnGetAPmessage"
-        android:layout_marginBottom="20dp"/>
 
-    <Button
-        android:id="@+id/btnClient"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnOther"
-        android:text="@string/btnGetClientMessage"
-        android:layout_marginBottom="20dp"/>
-
-    <Button
-        android:id="@+id/btnOther"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnOtherDevicesMessage"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="?android:attr/windowBackground"
+        />
 
 
 
