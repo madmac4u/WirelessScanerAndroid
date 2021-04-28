@@ -1,12 +1,10 @@
 
 package online.cyberforensic.wirelessscannerandroid.model;
 
+import java.util.List;
+import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
-
-import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
 public class Device {
@@ -25,22 +23,22 @@ public class Device {
     private String kismetServerUuid;
     @SerializedName("kismet.device.base.num_alerts")
     @Expose
-    private Integer kismetDeviceBaseNumAlerts;
+    private Long kismetDeviceBaseNumAlerts;
     @SerializedName("kismet.device.base.mod_time")
     @Expose
-    private Integer kismetDeviceBaseModTime;
+    private Long kismetDeviceBaseModTime;
     @SerializedName("kismet.device.base.last_time")
     @Expose
-    private Integer kismetDeviceBaseLastTime;
+    private Long kismetDeviceBaseLastTime;
     @SerializedName("kismet.device.base.first_time")
     @Expose
-    private Integer kismetDeviceBaseFirstTime;
+    private Long kismetDeviceBaseFirstTime;
     @SerializedName("kismet.device.base.frequency")
     @Expose
-    private Integer kismetDeviceBaseFrequency;
+    private Long kismetDeviceBaseFrequency;
     @SerializedName("kismet.device.base.basic_crypt_set")
     @Expose
-    private Integer kismetDeviceBaseBasicCryptSet;
+    private Long kismetDeviceBaseBasicCryptSet;
     @SerializedName("kismet.device.base.channel")
     @Expose
     private String kismetDeviceBaseChannel;
@@ -52,7 +50,7 @@ public class Device {
     private KismetDeviceBaseFreqKhzMap kismetDeviceBaseFreqKhzMap;
     @SerializedName("kismet.device.base.basic_type_set")
     @Expose
-    private Integer kismetDeviceBaseBasicTypeSet;
+    private Long kismetDeviceBaseBasicTypeSet;
     @SerializedName("kismet.device.base.signal")
     @Expose
     private KismetDeviceBaseSignal kismetDeviceBaseSignal;
@@ -76,34 +74,34 @@ public class Device {
     private String kismetDeviceBaseKey;
     @SerializedName("kismet.device.base.packets.total")
     @Expose
-    private Integer kismetDeviceBasePacketsTotal;
+    private Long kismetDeviceBasePacketsTotal;
     @SerializedName("dot11.device")
     @Expose
     private Dot11Device dot11Device;
     @SerializedName("kismet.device.base.packets.rx")
     @Expose
-    private Integer kismetDeviceBasePacketsRx;
+    private Long kismetDeviceBasePacketsRx;
     @SerializedName("kismet.device.base.packets.tx")
     @Expose
-    private Integer kismetDeviceBasePacketsTx;
+    private Long kismetDeviceBasePacketsTx;
     @SerializedName("kismet.device.base.packets.llc")
     @Expose
-    private Integer kismetDeviceBasePacketsLlc;
+    private Long kismetDeviceBasePacketsLlc;
     @SerializedName("kismet.device.base.packets.error")
     @Expose
-    private Integer kismetDeviceBasePacketsError;
+    private Long kismetDeviceBasePacketsError;
     @SerializedName("kismet.device.base.packets.data")
     @Expose
-    private Integer kismetDeviceBasePacketsData;
+    private Long kismetDeviceBasePacketsData;
     @SerializedName("kismet.device.base.packets.crypt")
     @Expose
-    private Integer kismetDeviceBasePacketsCrypt;
+    private Long kismetDeviceBasePacketsCrypt;
     @SerializedName("kismet.device.base.packets.filtered")
     @Expose
-    private Integer kismetDeviceBasePacketsFiltered;
+    private Long kismetDeviceBasePacketsFiltered;
     @SerializedName("kismet.device.base.datasize")
     @Expose
-    private Integer kismetDeviceBaseDatasize;
+    private Long kismetDeviceBaseDatasize;
     @SerializedName("kismet.device.base.packets.rrd")
     @Expose
     private KismetDeviceBasePacketsRrd kismetDeviceBasePacketsRrd;
@@ -143,51 +141,51 @@ public class Device {
         this.kismetServerUuid = kismetServerUuid;
     }
 
-    public Integer getKismetDeviceBaseNumAlerts() {
+    public Long getKismetDeviceBaseNumAlerts() {
         return kismetDeviceBaseNumAlerts;
     }
 
-    public void setKismetDeviceBaseNumAlerts(Integer kismetDeviceBaseNumAlerts) {
+    public void setKismetDeviceBaseNumAlerts(Long kismetDeviceBaseNumAlerts) {
         this.kismetDeviceBaseNumAlerts = kismetDeviceBaseNumAlerts;
     }
 
-    public Integer getKismetDeviceBaseModTime() {
+    public Long getKismetDeviceBaseModTime() {
         return kismetDeviceBaseModTime;
     }
 
-    public void setKismetDeviceBaseModTime(Integer kismetDeviceBaseModTime) {
+    public void setKismetDeviceBaseModTime(Long kismetDeviceBaseModTime) {
         this.kismetDeviceBaseModTime = kismetDeviceBaseModTime;
     }
 
-    public Integer getKismetDeviceBaseLastTime() {
+    public Long getKismetDeviceBaseLastTime() {
         return kismetDeviceBaseLastTime;
     }
 
-    public void setKismetDeviceBaseLastTime(Integer kismetDeviceBaseLastTime) {
+    public void setKismetDeviceBaseLastTime(Long kismetDeviceBaseLastTime) {
         this.kismetDeviceBaseLastTime = kismetDeviceBaseLastTime;
     }
 
-    public Integer getKismetDeviceBaseFirstTime() {
+    public Long getKismetDeviceBaseFirstTime() {
         return kismetDeviceBaseFirstTime;
     }
 
-    public void setKismetDeviceBaseFirstTime(Integer kismetDeviceBaseFirstTime) {
+    public void setKismetDeviceBaseFirstTime(Long kismetDeviceBaseFirstTime) {
         this.kismetDeviceBaseFirstTime = kismetDeviceBaseFirstTime;
     }
 
-    public Integer getKismetDeviceBaseFrequency() {
+    public Long getKismetDeviceBaseFrequency() {
         return kismetDeviceBaseFrequency;
     }
 
-    public void setKismetDeviceBaseFrequency(Integer kismetDeviceBaseFrequency) {
+    public void setKismetDeviceBaseFrequency(Long kismetDeviceBaseFrequency) {
         this.kismetDeviceBaseFrequency = kismetDeviceBaseFrequency;
     }
 
-    public Integer getKismetDeviceBaseBasicCryptSet() {
+    public Long getKismetDeviceBaseBasicCryptSet() {
         return kismetDeviceBaseBasicCryptSet;
     }
 
-    public void setKismetDeviceBaseBasicCryptSet(Integer kismetDeviceBaseBasicCryptSet) {
+    public void setKismetDeviceBaseBasicCryptSet(Long kismetDeviceBaseBasicCryptSet) {
         this.kismetDeviceBaseBasicCryptSet = kismetDeviceBaseBasicCryptSet;
     }
 
@@ -215,11 +213,11 @@ public class Device {
         this.kismetDeviceBaseFreqKhzMap = kismetDeviceBaseFreqKhzMap;
     }
 
-    public Integer getKismetDeviceBaseBasicTypeSet() {
+    public Long getKismetDeviceBaseBasicTypeSet() {
         return kismetDeviceBaseBasicTypeSet;
     }
 
-    public void setKismetDeviceBaseBasicTypeSet(Integer kismetDeviceBaseBasicTypeSet) {
+    public void setKismetDeviceBaseBasicTypeSet(Long kismetDeviceBaseBasicTypeSet) {
         this.kismetDeviceBaseBasicTypeSet = kismetDeviceBaseBasicTypeSet;
     }
 
@@ -279,11 +277,11 @@ public class Device {
         this.kismetDeviceBaseKey = kismetDeviceBaseKey;
     }
 
-    public Integer getKismetDeviceBasePacketsTotal() {
+    public Long getKismetDeviceBasePacketsTotal() {
         return kismetDeviceBasePacketsTotal;
     }
 
-    public void setKismetDeviceBasePacketsTotal(Integer kismetDeviceBasePacketsTotal) {
+    public void setKismetDeviceBasePacketsTotal(Long kismetDeviceBasePacketsTotal) {
         this.kismetDeviceBasePacketsTotal = kismetDeviceBasePacketsTotal;
     }
 
@@ -295,67 +293,67 @@ public class Device {
         this.dot11Device = dot11Device;
     }
 
-    public Integer getKismetDeviceBasePacketsRx() {
+    public Long getKismetDeviceBasePacketsRx() {
         return kismetDeviceBasePacketsRx;
     }
 
-    public void setKismetDeviceBasePacketsRx(Integer kismetDeviceBasePacketsRx) {
+    public void setKismetDeviceBasePacketsRx(Long kismetDeviceBasePacketsRx) {
         this.kismetDeviceBasePacketsRx = kismetDeviceBasePacketsRx;
     }
 
-    public Integer getKismetDeviceBasePacketsTx() {
+    public Long getKismetDeviceBasePacketsTx() {
         return kismetDeviceBasePacketsTx;
     }
 
-    public void setKismetDeviceBasePacketsTx(Integer kismetDeviceBasePacketsTx) {
+    public void setKismetDeviceBasePacketsTx(Long kismetDeviceBasePacketsTx) {
         this.kismetDeviceBasePacketsTx = kismetDeviceBasePacketsTx;
     }
 
-    public Integer getKismetDeviceBasePacketsLlc() {
+    public Long getKismetDeviceBasePacketsLlc() {
         return kismetDeviceBasePacketsLlc;
     }
 
-    public void setKismetDeviceBasePacketsLlc(Integer kismetDeviceBasePacketsLlc) {
+    public void setKismetDeviceBasePacketsLlc(Long kismetDeviceBasePacketsLlc) {
         this.kismetDeviceBasePacketsLlc = kismetDeviceBasePacketsLlc;
     }
 
-    public Integer getKismetDeviceBasePacketsError() {
+    public Long getKismetDeviceBasePacketsError() {
         return kismetDeviceBasePacketsError;
     }
 
-    public void setKismetDeviceBasePacketsError(Integer kismetDeviceBasePacketsError) {
+    public void setKismetDeviceBasePacketsError(Long kismetDeviceBasePacketsError) {
         this.kismetDeviceBasePacketsError = kismetDeviceBasePacketsError;
     }
 
-    public Integer getKismetDeviceBasePacketsData() {
+    public Long getKismetDeviceBasePacketsData() {
         return kismetDeviceBasePacketsData;
     }
 
-    public void setKismetDeviceBasePacketsData(Integer kismetDeviceBasePacketsData) {
+    public void setKismetDeviceBasePacketsData(Long kismetDeviceBasePacketsData) {
         this.kismetDeviceBasePacketsData = kismetDeviceBasePacketsData;
     }
 
-    public Integer getKismetDeviceBasePacketsCrypt() {
+    public Long getKismetDeviceBasePacketsCrypt() {
         return kismetDeviceBasePacketsCrypt;
     }
 
-    public void setKismetDeviceBasePacketsCrypt(Integer kismetDeviceBasePacketsCrypt) {
+    public void setKismetDeviceBasePacketsCrypt(Long kismetDeviceBasePacketsCrypt) {
         this.kismetDeviceBasePacketsCrypt = kismetDeviceBasePacketsCrypt;
     }
 
-    public Integer getKismetDeviceBasePacketsFiltered() {
+    public Long getKismetDeviceBasePacketsFiltered() {
         return kismetDeviceBasePacketsFiltered;
     }
 
-    public void setKismetDeviceBasePacketsFiltered(Integer kismetDeviceBasePacketsFiltered) {
+    public void setKismetDeviceBasePacketsFiltered(Long kismetDeviceBasePacketsFiltered) {
         this.kismetDeviceBasePacketsFiltered = kismetDeviceBasePacketsFiltered;
     }
 
-    public Integer getKismetDeviceBaseDatasize() {
+    public Long getKismetDeviceBaseDatasize() {
         return kismetDeviceBaseDatasize;
     }
 
-    public void setKismetDeviceBaseDatasize(Integer kismetDeviceBaseDatasize) {
+    public void setKismetDeviceBaseDatasize(Long kismetDeviceBaseDatasize) {
         this.kismetDeviceBaseDatasize = kismetDeviceBaseDatasize;
     }
 

@@ -13,31 +13,31 @@ public class KismetDeviceBaseSignal {
     private KismetCommonSignalSignalRrd kismetCommonSignalSignalRrd;
     @SerializedName("kismet.common.signal.carrierset")
     @Expose
-    private Integer kismetCommonSignalCarrierset;
+    private Long kismetCommonSignalCarrierset;
     @SerializedName("kismet.common.signal.encodingset")
     @Expose
-    private Integer kismetCommonSignalEncodingset;
+    private Long kismetCommonSignalEncodingset;
     @SerializedName("kismet.common.signal.maxseenrate")
     @Expose
-    private Integer kismetCommonSignalMaxseenrate;
+    private Long kismetCommonSignalMaxseenrate;
     @SerializedName("kismet.common.signal.max_noise")
     @Expose
-    private Integer kismetCommonSignalMaxNoise;
+    private Long kismetCommonSignalMaxNoise;
     @SerializedName("kismet.common.signal.max_signal")
     @Expose
-    private Integer kismetCommonSignalMaxSignal;
+    private Long kismetCommonSignalMaxSignal;
     @SerializedName("kismet.common.signal.min_noise")
     @Expose
-    private Integer kismetCommonSignalMinNoise;
+    private Long kismetCommonSignalMinNoise;
     @SerializedName("kismet.common.signal.min_signal")
     @Expose
-    private Integer kismetCommonSignalMinSignal;
+    private Long kismetCommonSignalMinSignal;
     @SerializedName("kismet.common.signal.last_noise")
     @Expose
-    private Integer kismetCommonSignalLastNoise;
+    private Long kismetCommonSignalLastNoise;
     @SerializedName("kismet.common.signal.last_signal")
     @Expose
-    private Integer kismetCommonSignalLastSignal;
+    private Long kismetCommonSignalLastSignal;
     @SerializedName("kismet.common.signal.type")
     @Expose
     private String kismetCommonSignalType;
@@ -50,75 +50,75 @@ public class KismetDeviceBaseSignal {
         this.kismetCommonSignalSignalRrd = kismetCommonSignalSignalRrd;
     }
 
-    public Integer getKismetCommonSignalCarrierset() {
+    public Long getKismetCommonSignalCarrierset() {
         return kismetCommonSignalCarrierset;
     }
 
-    public void setKismetCommonSignalCarrierset(Integer kismetCommonSignalCarrierset) {
+    public void setKismetCommonSignalCarrierset(Long kismetCommonSignalCarrierset) {
         this.kismetCommonSignalCarrierset = kismetCommonSignalCarrierset;
     }
 
-    public Integer getKismetCommonSignalEncodingset() {
+    public Long getKismetCommonSignalEncodingset() {
         return kismetCommonSignalEncodingset;
     }
 
-    public void setKismetCommonSignalEncodingset(Integer kismetCommonSignalEncodingset) {
+    public void setKismetCommonSignalEncodingset(Long kismetCommonSignalEncodingset) {
         this.kismetCommonSignalEncodingset = kismetCommonSignalEncodingset;
     }
 
-    public Integer getKismetCommonSignalMaxseenrate() {
+    public Long getKismetCommonSignalMaxseenrate() {
         return kismetCommonSignalMaxseenrate;
     }
 
-    public void setKismetCommonSignalMaxseenrate(Integer kismetCommonSignalMaxseenrate) {
+    public void setKismetCommonSignalMaxseenrate(Long kismetCommonSignalMaxseenrate) {
         this.kismetCommonSignalMaxseenrate = kismetCommonSignalMaxseenrate;
     }
 
-    public Integer getKismetCommonSignalMaxNoise() {
+    public Long getKismetCommonSignalMaxNoise() {
         return kismetCommonSignalMaxNoise;
     }
 
-    public void setKismetCommonSignalMaxNoise(Integer kismetCommonSignalMaxNoise) {
+    public void setKismetCommonSignalMaxNoise(Long kismetCommonSignalMaxNoise) {
         this.kismetCommonSignalMaxNoise = kismetCommonSignalMaxNoise;
     }
 
-    public Integer getKismetCommonSignalMaxSignal() {
+    public Long getKismetCommonSignalMaxSignal() {
         return kismetCommonSignalMaxSignal;
     }
 
-    public void setKismetCommonSignalMaxSignal(Integer kismetCommonSignalMaxSignal) {
+    public void setKismetCommonSignalMaxSignal(Long kismetCommonSignalMaxSignal) {
         this.kismetCommonSignalMaxSignal = kismetCommonSignalMaxSignal;
     }
 
-    public Integer getKismetCommonSignalMinNoise() {
+    public Long getKismetCommonSignalMinNoise() {
         return kismetCommonSignalMinNoise;
     }
 
-    public void setKismetCommonSignalMinNoise(Integer kismetCommonSignalMinNoise) {
+    public void setKismetCommonSignalMinNoise(Long kismetCommonSignalMinNoise) {
         this.kismetCommonSignalMinNoise = kismetCommonSignalMinNoise;
     }
 
-    public Integer getKismetCommonSignalMinSignal() {
+    public Long getKismetCommonSignalMinSignal() {
         return kismetCommonSignalMinSignal;
     }
 
-    public void setKismetCommonSignalMinSignal(Integer kismetCommonSignalMinSignal) {
+    public void setKismetCommonSignalMinSignal(Long kismetCommonSignalMinSignal) {
         this.kismetCommonSignalMinSignal = kismetCommonSignalMinSignal;
     }
 
-    public Integer getKismetCommonSignalLastNoise() {
+    public Long getKismetCommonSignalLastNoise() {
         return kismetCommonSignalLastNoise;
     }
 
-    public void setKismetCommonSignalLastNoise(Integer kismetCommonSignalLastNoise) {
+    public void setKismetCommonSignalLastNoise(Long kismetCommonSignalLastNoise) {
         this.kismetCommonSignalLastNoise = kismetCommonSignalLastNoise;
     }
 
-    public Integer getKismetCommonSignalLastSignal() {
+    public Long getKismetCommonSignalLastSignal() {
         return kismetCommonSignalLastSignal;
     }
 
-    public void setKismetCommonSignalLastSignal(Integer kismetCommonSignalLastSignal) {
+    public void setKismetCommonSignalLastSignal(Long kismetCommonSignalLastSignal) {
         this.kismetCommonSignalLastSignal = kismetCommonSignalLastSignal;
     }
 

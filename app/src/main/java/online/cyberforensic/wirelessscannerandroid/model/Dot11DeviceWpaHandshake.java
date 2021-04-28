@@ -19,16 +19,16 @@ public class Dot11DeviceWpaHandshake {
     private String dot11EapolNonce;
     @SerializedName("dot11.eapol.install")
     @Expose
-    private Integer dot11EapolInstall;
+    private Long dot11EapolInstall;
     @SerializedName("dot11.eapol.replay_counter")
     @Expose
-    private Integer dot11EapolReplayCounter;
+    private Long dot11EapolReplayCounter;
     @SerializedName("dot11.eapol.message_num")
     @Expose
-    private Integer dot11EapolMessageNum;
+    private Long dot11EapolMessageNum;
     @SerializedName("dot11.eapol.direction")
     @Expose
-    private Integer dot11EapolDirection;
+    private Long dot11EapolDirection;
     @SerializedName("dot11.eapol.timestamp")
     @Expose
     private Double dot11EapolTimestamp;
@@ -57,35 +57,35 @@ public class Dot11DeviceWpaHandshake {
         this.dot11EapolNonce = dot11EapolNonce;
     }
 
-    public Integer getDot11EapolInstall() {
+    public Long getDot11EapolInstall() {
         return dot11EapolInstall;
     }
 
-    public void setDot11EapolInstall(Integer dot11EapolInstall) {
+    public void setDot11EapolInstall(Long dot11EapolInstall) {
         this.dot11EapolInstall = dot11EapolInstall;
     }
 
-    public Integer getDot11EapolReplayCounter() {
+    public Long getDot11EapolReplayCounter() {
         return dot11EapolReplayCounter;
     }
 
-    public void setDot11EapolReplayCounter(Integer dot11EapolReplayCounter) {
+    public void setDot11EapolReplayCounter(Long dot11EapolReplayCounter) {
         this.dot11EapolReplayCounter = dot11EapolReplayCounter;
     }
 
-    public Integer getDot11EapolMessageNum() {
+    public Long getDot11EapolMessageNum() {
         return dot11EapolMessageNum;
     }
 
-    public void setDot11EapolMessageNum(Integer dot11EapolMessageNum) {
+    public void setDot11EapolMessageNum(Long dot11EapolMessageNum) {
         this.dot11EapolMessageNum = dot11EapolMessageNum;
     }
 
-    public Integer getDot11EapolDirection() {
+    public Long getDot11EapolDirection() {
         return dot11EapolDirection;
     }
 
-    public void setDot11EapolDirection(Integer dot11EapolDirection) {
+    public void setDot11EapolDirection(Long dot11EapolDirection) {
         this.dot11EapolDirection = dot11EapolDirection;
     }
 

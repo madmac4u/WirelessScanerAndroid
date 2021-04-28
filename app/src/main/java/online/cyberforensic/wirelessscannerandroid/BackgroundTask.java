@@ -9,28 +9,34 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BackgroundTask {
+import online.cyberforensic.wirelessscannerandroid.model.Device;
+
+
+public class BackgroundTask<deviceArray> {
 
     public static final String EXTRA_DEVICE_NAME = "devName";
     public static final String EXTRA_DEVICE_TYPE = "devType";
     public static final String EXTRA_DEVICE_MANUF = "devManuf";
     public static final String EXTRA_DEVICE_MAC = "devMac";
+    public static final String EXTRA_DEVICE_SIGNAL = "devSignal";
 
     private String json_url = "http://27.96.91.193:2501/devices/views/all/devices.json";
     private String USERNAME = "user";
     private String PASSWORD = "user";
 
     Context context;
-    ArrayList<Device> arrayList = new ArrayList<>();
+    Device[] deviceArray,finalDeviceArray;
+    ArrayList<Device> finalArray = new ArrayList<>();
+
 
     public BackgroundTask(Context context) {
         this.context = context;
@@ -39,68 +45,63 @@ public class BackgroundTask {
     public interface VolleyResponseListener{
         void onError(String message);
 
-        void onResponse(ArrayList<Device> arrayList);
+        void onResponse(Device[] devices);
     }
 
     public void getList(String type,VolleyResponseListener volleyResponseListener){
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, json_url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-//                Toast.makeText(context, response.toString(), Toast.LENGTH_SHORT).show();
-                int count = 0;
-                while (count< response.length()){
-                    try {
-                        JSONObject jsonObject = response.getJSONObject(count);
 
-                        Device devices = new Device(
-                                jsonObject.getString("kismet.device.base.commonname"),
-                                jsonObject.getString("kismet.device.base.manuf"),
-                                jsonObject.getString("kismet.device.base.type"),
-                                jsonObject.getString("kismet.device.base.macaddr")
-                                );
+                GsonBuilder gsonBuilder = new GsonBuilder();
+                Gson gson = gsonBuilder.create();
+                gson.fromJson(String.valueOf(response),Device[].class);
+                deviceArray = gson.fromJson(String.valueOf(response),Device[].class);
 
-                        char macAddressRandomization = jsonObject.getString("kismet.device.base.macaddr").charAt(1);
+                try {
+
+                    for (int i = 0; i < deviceArray.length; i++) {
+                        Device device = deviceArray[i];
+                        char macAddressRandomization = device.getKismetDeviceBaseMacaddr().charAt(1);
                         // code to filter out randomely generated mac addresses by different devices
-                        if(macAddressRandomization == 'A' || macAddressRandomization == '2' ||macAddressRandomization == 'E' || macAddressRandomization == '6'){
+                        if (macAddressRandomization == 'A' || macAddressRandomization == '2' || macAddressRandomization == 'E' || macAddressRandomization == '6') {
 
-                        }else {
+                        } else {
                             switch (type) {
                                 case "AP":
-                                    if (jsonObject.getString("kismet.device.base.type").contains("AP")) {
-                                        arrayList.add(devices);
+                                    if (device.getKismetDeviceBaseType().contains("AP")) {
+                                        finalArray.add(device);
                                     }
                                     break;
                                 case "Client":
-                                    if (jsonObject.getString("kismet.device.base.type").contains("Client")) {
-                                        arrayList.add(devices);
+                                    if (device.getKismetDeviceBaseType().contains("Client")) {
+                                        finalArray.add(device);
                                     }
                                     break;
                                 case "Bridge":
-                                    if (jsonObject.getString("kismet.device.base.type").contains("Bridge")) {
-                                        arrayList.add(devices);
+                                    if (device.getKismetDeviceBaseType().contains("Bridge")) {
+                                        finalArray.add(device);
                                     }
                                     break;
                                 case "Ad-Hoc":
-                                    if (jsonObject.getString("kismet.device.base.type").contains("Ad-Hoc")) {
-                                        arrayList.add(devices);
+                                    if (device.getKismetDeviceBaseType().contains("Ad-Hoc")) {
+                                        finalArray.add(device);
                                     }
                                     break;
                                 default:
-                                    arrayList.add(devices);
+                                    finalArray.add(device);
                                     break;
 
                             }
                         }
-
-                        count++;
-
-                    } catch (JSONException e) {
-                        Toast.makeText(context, "e.toString()", Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
                     }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
 
-                volleyResponseListener.onResponse(arrayList);
+                finalDeviceArray = (Device[]) finalArray.toArray(new Device[finalArray.size()]);
+
+                volleyResponseListener.onResponse(finalDeviceArray);
 
 
             }

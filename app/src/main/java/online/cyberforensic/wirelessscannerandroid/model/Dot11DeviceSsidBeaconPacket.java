@@ -13,16 +13,16 @@ public class Dot11DeviceSsidBeaconPacket {
     private String kismetPacketData;
     @SerializedName("kismet.packet.source")
     @Expose
-    private Integer kismetPacketSource;
+    private Long kismetPacketSource;
     @SerializedName("kismet.packet.dlt")
     @Expose
-    private Integer kismetPacketDlt;
+    private Long kismetPacketDlt;
     @SerializedName("kismet.packet.ts_usec")
     @Expose
-    private Integer kismetPacketTsUsec;
+    private Long kismetPacketTsUsec;
     @SerializedName("kismet.packet.ts_sec")
     @Expose
-    private Integer kismetPacketTsSec;
+    private Long kismetPacketTsSec;
 
     public String getKismetPacketData() {
         return kismetPacketData;
@@ -32,35 +32,35 @@ public class Dot11DeviceSsidBeaconPacket {
         this.kismetPacketData = kismetPacketData;
     }
 
-    public Integer getKismetPacketSource() {
+    public Long getKismetPacketSource() {
         return kismetPacketSource;
     }
 
-    public void setKismetPacketSource(Integer kismetPacketSource) {
+    public void setKismetPacketSource(Long kismetPacketSource) {
         this.kismetPacketSource = kismetPacketSource;
     }
 
-    public Integer getKismetPacketDlt() {
+    public Long getKismetPacketDlt() {
         return kismetPacketDlt;
     }
 
-    public void setKismetPacketDlt(Integer kismetPacketDlt) {
+    public void setKismetPacketDlt(Long kismetPacketDlt) {
         this.kismetPacketDlt = kismetPacketDlt;
     }
 
-    public Integer getKismetPacketTsUsec() {
+    public Long getKismetPacketTsUsec() {
         return kismetPacketTsUsec;
     }
 
-    public void setKismetPacketTsUsec(Integer kismetPacketTsUsec) {
+    public void setKismetPacketTsUsec(Long kismetPacketTsUsec) {
         this.kismetPacketTsUsec = kismetPacketTsUsec;
     }
 
-    public Integer getKismetPacketTsSec() {
+    public Long getKismetPacketTsSec() {
         return kismetPacketTsSec;
     }
 
-    public void setKismetPacketTsSec(Integer kismetPacketTsSec) {
+    public void setKismetPacketTsSec(Long kismetPacketTsSec) {
         this.kismetPacketTsSec = kismetPacketTsSec;
     }
 

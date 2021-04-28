@@ -1,5 +1,6 @@
 package online.cyberforensic.wirelessscannerandroid;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import online.cyberforensic.wirelessscannerandroid.model.Device;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
-    ArrayList<Device> arrayList = new ArrayList<>();
-    int row_index;
+    Device[] devices;
     private Context context;
     private OnItemClickListener mListener;
 
@@ -29,8 +29,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
 
-    public RecyclerAdapter(ArrayList<Device> arrayList, Context cont) {
-        this.arrayList = arrayList;
+    public RecyclerAdapter(Device[] devices, Context cont) {
+        this.devices = devices;
         this.context = cont;
     }
 
@@ -42,25 +42,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return myViewHolder;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
-        holder.name.setText(arrayList.get(position).getName());
-        holder.manuf.setText(arrayList.get(position).getManuf());
-        holder.type.setText(arrayList.get(position).getType());
-        holder.mac.setText(arrayList.get(position).getMac());
-
+        Device device = devices[position];
+        holder.name.setText(device.getKismetDeviceBaseCommonname());
+        holder.manuf.setText(device.getKismetDeviceBaseManuf());
+        holder.type.setText(device.getKismetDeviceBaseType());
+        holder.mac.setText(device.getKismetDeviceBaseMacaddr());
 
     }
 
     @Override
     public int getItemCount() {
-
-        return arrayList.size();
+        return devices.length;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView name, manuf,type,mac,signal;
+        TextView name, manuf,type,mac;
         RelativeLayout relativeLayout;
 
 

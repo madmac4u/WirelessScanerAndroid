@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DeviceDetails"
     android:background="@color/white"
-    android:id="@+id/deviceDetailsLayout"
+    android:id="@+id/apDeviceDetailsLayout"
     android:padding="10dp">
 
     <TextView
@@ -24,105 +24,47 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TYPE : "
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/deviceName"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:id="@+id/deviceTypeKey"/>
-
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MAC-ADDRESS : "
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:layout_below="@+id/deviceType"
-        android:id="@+id/deviceMacKey"/>
-
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MANUFACTURER : "
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:layout_below="@+id/deviceMac"
-        android:id="@+id/deviceManufKey"/>
-
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SIGNAL STRENGTH : "
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:layout_below="@+id/deviceManuf"
-        android:id="@+id/deviceSignalKey"/>
-
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="- ASSOCIATED DEVICES -"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/deviceSignal"
-        android:id="@+id/associatedDevicesHeader"/>
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Type"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/deviceName"
-        android:layout_alignParentRight="true"
         android:textSize="20sp"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:id="@+id/deviceType"/>
 
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mac"
-        android:layout_marginTop="10dp"
+        android:textSize="20sp"
         android:layout_below="@+id/deviceType"
-        android:layout_alignParentRight="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:id="@+id/deviceMac"/>
-
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Manufacturer"
-        android:layout_marginTop="10dp"
+        android:textSize="20sp"
         android:layout_below="@+id/deviceMac"
-        android:layout_alignParentRight="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:id="@+id/deviceManuf"/>
-
     <TextView
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manufacturer"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/deviceManuf"
-        android:layout_alignParentRight="true"
+        android:text="Device Signal"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:layout_below="@+id/deviceManuf"
         android:id="@+id/deviceSignal"/>
 
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Associated Devices"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_below="@+id/deviceSignal"
+        android:id="@+id/associatedDevicesHeader"/>
 
     <ListView
         android:layout_marginTop="10dp"

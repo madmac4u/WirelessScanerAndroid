@@ -11,46 +11,46 @@ public class KismetCommonSignalSignalRrd {
 
     @SerializedName("kismet.common.rrd.blank_val")
     @Expose
-    private Integer kismetCommonRrdBlankVal;
+    private Long kismetCommonRrdBlankVal;
     @SerializedName("kismet.common.rrd.minute_vec")
     @Expose
-    private List<Integer> kismetCommonRrdMinuteVec = null;
+    private List<Long> kismetCommonRrdMinuteVec = null;
     @SerializedName("kismet.common.rrd.serial_time")
     @Expose
-    private Integer kismetCommonRrdSerialTime;
+    private Long kismetCommonRrdSerialTime;
     @SerializedName("kismet.common.rrd.last_time")
     @Expose
-    private Integer kismetCommonRrdLastTime;
+    private Long kismetCommonRrdLastTime;
 
-    public Integer getKismetCommonRrdBlankVal() {
+    public Long getKismetCommonRrdBlankVal() {
         return kismetCommonRrdBlankVal;
     }
 
-    public void setKismetCommonRrdBlankVal(Integer kismetCommonRrdBlankVal) {
+    public void setKismetCommonRrdBlankVal(Long kismetCommonRrdBlankVal) {
         this.kismetCommonRrdBlankVal = kismetCommonRrdBlankVal;
     }
 
-    public List<Integer> getKismetCommonRrdMinuteVec() {
+    public List<Long> getKismetCommonRrdMinuteVec() {
         return kismetCommonRrdMinuteVec;
     }
 
-    public void setKismetCommonRrdMinuteVec(List<Integer> kismetCommonRrdMinuteVec) {
+    public void setKismetCommonRrdMinuteVec(List<Long> kismetCommonRrdMinuteVec) {
         this.kismetCommonRrdMinuteVec = kismetCommonRrdMinuteVec;
     }
 
-    public Integer getKismetCommonRrdSerialTime() {
+    public Long getKismetCommonRrdSerialTime() {
         return kismetCommonRrdSerialTime;
     }
 
-    public void setKismetCommonRrdSerialTime(Integer kismetCommonRrdSerialTime) {
+    public void setKismetCommonRrdSerialTime(Long kismetCommonRrdSerialTime) {
         this.kismetCommonRrdSerialTime = kismetCommonRrdSerialTime;
     }
 
-    public Integer getKismetCommonRrdLastTime() {
+    public Long getKismetCommonRrdLastTime() {
         return kismetCommonRrdLastTime;
     }
 
-    public void setKismetCommonRrdLastTime(Integer kismetCommonRrdLastTime) {
+    public void setKismetCommonRrdLastTime(Long kismetCommonRrdLastTime) {
         this.kismetCommonRrdLastTime = kismetCommonRrdLastTime;
     }
 

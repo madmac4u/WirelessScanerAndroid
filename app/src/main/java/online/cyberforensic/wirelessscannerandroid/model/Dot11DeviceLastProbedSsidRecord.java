@@ -13,43 +13,43 @@ public class Dot11DeviceLastProbedSsidRecord {
     private String dot11ProbedssidWpsUuidE;
     @SerializedName("dot11.probedssid.wps_config_methods")
     @Expose
-    private Integer dot11ProbedssidWpsConfigMethods;
+    private Long dot11ProbedssidWpsConfigMethods;
     @SerializedName("dot11.probedssid.wps_state")
     @Expose
-    private Integer dot11ProbedssidWpsState;
+    private Long dot11ProbedssidWpsState;
     @SerializedName("dot11.probedssid.ssid")
     @Expose
     private String dot11ProbedssidSsid;
     @SerializedName("dot11.probedssid.ssidlen")
     @Expose
-    private Integer dot11ProbedssidSsidlen;
+    private Long dot11ProbedssidSsidlen;
     @SerializedName("dot11.probedssid.bssid")
     @Expose
     private String dot11ProbedssidBssid;
     @SerializedName("dot11.probedssid.first_time")
     @Expose
-    private Integer dot11ProbedssidFirstTime;
+    private Long dot11ProbedssidFirstTime;
     @SerializedName("dot11.probedssid.last_time")
     @Expose
-    private Integer dot11ProbedssidLastTime;
+    private Long dot11ProbedssidLastTime;
     @SerializedName("dot11.probedssid.dot11r_mobility")
     @Expose
-    private Integer dot11ProbedssidDot11rMobility;
+    private Long dot11ProbedssidDot11rMobility;
     @SerializedName("dot11.probedssid.dot11r_mobility_domain_id")
     @Expose
-    private Integer dot11ProbedssidDot11rMobilityDomainId;
+    private Long dot11ProbedssidDot11rMobilityDomainId;
     @SerializedName("dot11.probedssid.crypt_set")
     @Expose
-    private Integer dot11ProbedssidCryptSet;
+    private Long dot11ProbedssidCryptSet;
     @SerializedName("dot11.probedssid.wpa_mfp_required")
     @Expose
-    private Integer dot11ProbedssidWpaMfpRequired;
+    private Long dot11ProbedssidWpaMfpRequired;
     @SerializedName("dot11.probedssid.wpa_mfp_supported")
     @Expose
-    private Integer dot11ProbedssidWpaMfpSupported;
+    private Long dot11ProbedssidWpaMfpSupported;
     @SerializedName("dot11.probedssid.wps_version")
     @Expose
-    private Integer dot11ProbedssidWpsVersion;
+    private Long dot11ProbedssidWpsVersion;
 
     public String getDot11ProbedssidWpsUuidE() {
         return dot11ProbedssidWpsUuidE;
@@ -59,19 +59,19 @@ public class Dot11DeviceLastProbedSsidRecord {
         this.dot11ProbedssidWpsUuidE = dot11ProbedssidWpsUuidE;
     }
 
-    public Integer getDot11ProbedssidWpsConfigMethods() {
+    public Long getDot11ProbedssidWpsConfigMethods() {
         return dot11ProbedssidWpsConfigMethods;
     }
 
-    public void setDot11ProbedssidWpsConfigMethods(Integer dot11ProbedssidWpsConfigMethods) {
+    public void setDot11ProbedssidWpsConfigMethods(Long dot11ProbedssidWpsConfigMethods) {
         this.dot11ProbedssidWpsConfigMethods = dot11ProbedssidWpsConfigMethods;
     }
 
-    public Integer getDot11ProbedssidWpsState() {
+    public Long getDot11ProbedssidWpsState() {
         return dot11ProbedssidWpsState;
     }
 
-    public void setDot11ProbedssidWpsState(Integer dot11ProbedssidWpsState) {
+    public void setDot11ProbedssidWpsState(Long dot11ProbedssidWpsState) {
         this.dot11ProbedssidWpsState = dot11ProbedssidWpsState;
     }
 
@@ -83,11 +83,11 @@ public class Dot11DeviceLastProbedSsidRecord {
         this.dot11ProbedssidSsid = dot11ProbedssidSsid;
     }
 
-    public Integer getDot11ProbedssidSsidlen() {
+    public Long getDot11ProbedssidSsidlen() {
         return dot11ProbedssidSsidlen;
     }
 
-    public void setDot11ProbedssidSsidlen(Integer dot11ProbedssidSsidlen) {
+    public void setDot11ProbedssidSsidlen(Long dot11ProbedssidSsidlen) {
         this.dot11ProbedssidSsidlen = dot11ProbedssidSsidlen;
     }
 
@@ -99,67 +99,67 @@ public class Dot11DeviceLastProbedSsidRecord {
         this.dot11ProbedssidBssid = dot11ProbedssidBssid;
     }
 
-    public Integer getDot11ProbedssidFirstTime() {
+    public Long getDot11ProbedssidFirstTime() {
         return dot11ProbedssidFirstTime;
     }
 
-    public void setDot11ProbedssidFirstTime(Integer dot11ProbedssidFirstTime) {
+    public void setDot11ProbedssidFirstTime(Long dot11ProbedssidFirstTime) {
         this.dot11ProbedssidFirstTime = dot11ProbedssidFirstTime;
     }
 
-    public Integer getDot11ProbedssidLastTime() {
+    public Long getDot11ProbedssidLastTime() {
         return dot11ProbedssidLastTime;
     }
 
-    public void setDot11ProbedssidLastTime(Integer dot11ProbedssidLastTime) {
+    public void setDot11ProbedssidLastTime(Long dot11ProbedssidLastTime) {
         this.dot11ProbedssidLastTime = dot11ProbedssidLastTime;
     }
 
-    public Integer getDot11ProbedssidDot11rMobility() {
+    public Long getDot11ProbedssidDot11rMobility() {
         return dot11ProbedssidDot11rMobility;
     }
 
-    public void setDot11ProbedssidDot11rMobility(Integer dot11ProbedssidDot11rMobility) {
+    public void setDot11ProbedssidDot11rMobility(Long dot11ProbedssidDot11rMobility) {
         this.dot11ProbedssidDot11rMobility = dot11ProbedssidDot11rMobility;
     }
 
-    public Integer getDot11ProbedssidDot11rMobilityDomainId() {
+    public Long getDot11ProbedssidDot11rMobilityDomainId() {
         return dot11ProbedssidDot11rMobilityDomainId;
     }
 
-    public void setDot11ProbedssidDot11rMobilityDomainId(Integer dot11ProbedssidDot11rMobilityDomainId) {
+    public void setDot11ProbedssidDot11rMobilityDomainId(Long dot11ProbedssidDot11rMobilityDomainId) {
         this.dot11ProbedssidDot11rMobilityDomainId = dot11ProbedssidDot11rMobilityDomainId;
     }
 
-    public Integer getDot11ProbedssidCryptSet() {
+    public Long getDot11ProbedssidCryptSet() {
         return dot11ProbedssidCryptSet;
     }
 
-    public void setDot11ProbedssidCryptSet(Integer dot11ProbedssidCryptSet) {
+    public void setDot11ProbedssidCryptSet(Long dot11ProbedssidCryptSet) {
         this.dot11ProbedssidCryptSet = dot11ProbedssidCryptSet;
     }
 
-    public Integer getDot11ProbedssidWpaMfpRequired() {
+    public Long getDot11ProbedssidWpaMfpRequired() {
         return dot11ProbedssidWpaMfpRequired;
     }
 
-    public void setDot11ProbedssidWpaMfpRequired(Integer dot11ProbedssidWpaMfpRequired) {
+    public void setDot11ProbedssidWpaMfpRequired(Long dot11ProbedssidWpaMfpRequired) {
         this.dot11ProbedssidWpaMfpRequired = dot11ProbedssidWpaMfpRequired;
     }
 
-    public Integer getDot11ProbedssidWpaMfpSupported() {
+    public Long getDot11ProbedssidWpaMfpSupported() {
         return dot11ProbedssidWpaMfpSupported;
     }
 
-    public void setDot11ProbedssidWpaMfpSupported(Integer dot11ProbedssidWpaMfpSupported) {
+    public void setDot11ProbedssidWpaMfpSupported(Long dot11ProbedssidWpaMfpSupported) {
         this.dot11ProbedssidWpaMfpSupported = dot11ProbedssidWpaMfpSupported;
     }
 
-    public Integer getDot11ProbedssidWpsVersion() {
+    public Long getDot11ProbedssidWpsVersion() {
         return dot11ProbedssidWpsVersion;
     }
 
-    public void setDot11ProbedssidWpsVersion(Integer dot11ProbedssidWpsVersion) {
+    public void setDot11ProbedssidWpsVersion(Long dot11ProbedssidWpsVersion) {
         this.dot11ProbedssidWpsVersion = dot11ProbedssidWpsVersion;
     }
 

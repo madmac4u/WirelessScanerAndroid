@@ -14,16 +14,18 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import online.cyberforensic.wirelessscannerandroid.model.Device;
+
 import static online.cyberforensic.wirelessscannerandroid.BackgroundTask.EXTRA_DEVICE_MAC;
 import static online.cyberforensic.wirelessscannerandroid.BackgroundTask.EXTRA_DEVICE_MANUF;
 import static online.cyberforensic.wirelessscannerandroid.BackgroundTask.EXTRA_DEVICE_NAME;
+import static online.cyberforensic.wirelessscannerandroid.BackgroundTask.EXTRA_DEVICE_SIGNAL;
 import static online.cyberforensic.wirelessscannerandroid.BackgroundTask.EXTRA_DEVICE_TYPE;
 public class OtherFragment extends Fragment implements RecyclerAdapter.OnItemClickListener{
 
     private RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
-    ArrayList<Device> mArryList ;
+    Device[] devices ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,8 @@ public class OtherFragment extends Fragment implements RecyclerAdapter.OnItemCli
             }
 
             @Override
-            public void onResponse(ArrayList<Device> arrayList) {
-                mArryList = arrayList;
+            public void onResponse(Device[] arrayList) {
+                devices = arrayList;
                 recyclerAdapter = new RecyclerAdapter(arrayList,getContext());
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
                 recyclerView.setLayoutManager(layoutManager);
@@ -53,21 +55,25 @@ public class OtherFragment extends Fragment implements RecyclerAdapter.OnItemCli
                 recyclerAdapter.setOnItemClickListener(OtherFragment.this::onItemClick);
                 recyclerView.addItemDecoration(dividerItemDecoration);
                 recyclerAdapter.notifyDataSetChanged();
-
             }
+
         });
 
         return view;
     }
+
+
     @Override
     public void onItemClick(int position) {
         Intent detailIntent = new Intent(getContext(), DeviceDetails.class);
-        Device clickedItem = mArryList.get(position);
-        detailIntent.putExtra(EXTRA_DEVICE_NAME, clickedItem.getName());
-        detailIntent.putExtra(EXTRA_DEVICE_TYPE, clickedItem.getType());
-        detailIntent.putExtra(EXTRA_DEVICE_MANUF, clickedItem.getManuf());
-        detailIntent.putExtra(EXTRA_DEVICE_MAC, clickedItem.getMac());
+        Device clickedItem = devices[position];
+        detailIntent.putExtra(EXTRA_DEVICE_NAME, clickedItem.getKismetDeviceBaseCommonname());
+        detailIntent.putExtra(EXTRA_DEVICE_TYPE, clickedItem.getKismetDeviceBaseType());
+        detailIntent.putExtra(EXTRA_DEVICE_MANUF, clickedItem.getKismetDeviceBaseManuf());
+        detailIntent.putExtra(EXTRA_DEVICE_MAC, clickedItem.getKismetDeviceBaseMacaddr());
+        detailIntent.putExtra(EXTRA_DEVICE_SIGNAL, clickedItem.getKismetDeviceBaseSignal().getKismetCommonSignalLastSignal().toString());
 
         startActivity(detailIntent);
     }
 }
+

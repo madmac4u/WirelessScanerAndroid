@@ -13,13 +13,13 @@ public class KismetDeviceBaseSeenby {
     private String kismetCommonSeenbyUuid;
     @SerializedName("kismet.common.seenby.num_packets")
     @Expose
-    private Integer kismetCommonSeenbyNumPackets;
+    private Long kismetCommonSeenbyNumPackets;
     @SerializedName("kismet.common.seenby.last_time")
     @Expose
-    private Integer kismetCommonSeenbyLastTime;
+    private Long kismetCommonSeenbyLastTime;
     @SerializedName("kismet.common.seenby.first_time")
     @Expose
-    private Integer kismetCommonSeenbyFirstTime;
+    private Long kismetCommonSeenbyFirstTime;
 
     public String getKismetCommonSeenbyUuid() {
         return kismetCommonSeenbyUuid;
@@ -29,27 +29,27 @@ public class KismetDeviceBaseSeenby {
         this.kismetCommonSeenbyUuid = kismetCommonSeenbyUuid;
     }
 
-    public Integer getKismetCommonSeenbyNumPackets() {
+    public Long getKismetCommonSeenbyNumPackets() {
         return kismetCommonSeenbyNumPackets;
     }
 
-    public void setKismetCommonSeenbyNumPackets(Integer kismetCommonSeenbyNumPackets) {
+    public void setKismetCommonSeenbyNumPackets(Long kismetCommonSeenbyNumPackets) {
         this.kismetCommonSeenbyNumPackets = kismetCommonSeenbyNumPackets;
     }
 
-    public Integer getKismetCommonSeenbyLastTime() {
+    public Long getKismetCommonSeenbyLastTime() {
         return kismetCommonSeenbyLastTime;
     }
 
-    public void setKismetCommonSeenbyLastTime(Integer kismetCommonSeenbyLastTime) {
+    public void setKismetCommonSeenbyLastTime(Long kismetCommonSeenbyLastTime) {
         this.kismetCommonSeenbyLastTime = kismetCommonSeenbyLastTime;
     }
 
-    public Integer getKismetCommonSeenbyFirstTime() {
+    public Long getKismetCommonSeenbyFirstTime() {
         return kismetCommonSeenbyFirstTime;
     }
 
-    public void setKismetCommonSeenbyFirstTime(Integer kismetCommonSeenbyFirstTime) {
+    public void setKismetCommonSeenbyFirstTime(Long kismetCommonSeenbyFirstTime) {
         this.kismetCommonSeenbyFirstTime = kismetCommonSeenbyFirstTime;
     }
 
