@@ -29,9 +29,9 @@ public class BackgroundTask<deviceArray> {
     public static final String EXTRA_DEVICE_MAC = "devMac";
     public static final String EXTRA_DEVICE_SIGNAL = "devSignal";
 
-    private String json_url = "http://27.96.91.193:2501/devices/views/all/devices.json";
-    private String USERNAME = "user";
-    private String PASSWORD = "user";
+    private String json_url = "http://10.0.0.1:2501/devices/views/all/devices.json";
+    private String USERNAME = "kali";
+    private String PASSWORD = "kali";
 
     Context context;
     Device[] deviceArray,finalDeviceArray;
@@ -63,10 +63,11 @@ public class BackgroundTask<deviceArray> {
                     for (int i = 0; i < deviceArray.length; i++) {
                         Device device = deviceArray[i];
                         char macAddressRandomization = device.getKismetDeviceBaseMacaddr().charAt(1);
-                        // code to filter out randomely generated mac addresses by different devices
-                        if (macAddressRandomization == 'A' || macAddressRandomization == '2' || macAddressRandomization == 'E' || macAddressRandomization == '6') {
 
-                        } else {
+                        // code to filter out randomely generated mac addresses by different devices
+                        if (macAddressRandomization == 'K' || macAddressRandomization == 'K' || macAddressRandomization == 'K' || macAddressRandomization == 'K') {
+
+                        }else if((device.getKismetDeviceBaseSignal().getKismetCommonSignalLastSignal() > -70) && (device.getKismetDeviceBaseSignal().getKismetCommonSignalLastSignal() < 0)){
                             switch (type) {
                                 case "AP":
                                     if (device.getKismetDeviceBaseType().contains("AP")) {
@@ -74,7 +75,7 @@ public class BackgroundTask<deviceArray> {
                                     }
                                     break;
                                 case "Client":
-                                    if (device.getKismetDeviceBaseType().contains("Client")) {
+                                    if (device.getKismetDeviceBaseType().contains("Client") || device.getKismetDeviceBaseType().contains("Device")) {
                                         finalArray.add(device);
                                     }
                                     break;
@@ -101,7 +102,9 @@ public class BackgroundTask<deviceArray> {
 
                 finalDeviceArray = (Device[]) finalArray.toArray(new Device[finalArray.size()]);
 
+
                 volleyResponseListener.onResponse(finalDeviceArray);
+
 
 
             }

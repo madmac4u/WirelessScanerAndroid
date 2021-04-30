@@ -24,55 +24,112 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type"
+        android:text="TYPE : "
         android:layout_marginTop="10dp"
         android:layout_below="@+id/deviceName"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:id="@+id/deviceType"/>
+        android:id="@+id/deviceTypeKey"/>
 
     <TextView
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mac"
+        android:text="MAC-ADDRESS : "
+        android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:layout_below="@+id/deviceType"
-        android:id="@+id/deviceMac"/>
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manufacturer"
-        android:textSize="20sp"
-        android:layout_below="@+id/deviceMac"
-        android:id="@+id/deviceManuf"/>
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Device Signal"
-        android:textSize="20sp"
-        android:layout_below="@+id/deviceManuf"
-        android:id="@+id/deviceSignal"/>
+        android:id="@+id/deviceMacKey"/>
 
     <TextView
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Associated Devices"
+        android:text="MANUFACTURER : "
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/deviceMac"
+        android:id="@+id/deviceManufKey"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGNAL STRENGTH : "
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/deviceManuf"
+        android:id="@+id/deviceSignalKey"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- ASSOCIATED DEVICES -"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_below="@+id/deviceSignal"
         android:id="@+id/associatedDevicesHeader"/>
 
-    <ListView
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
         android:layout_marginTop="10dp"
-        android:id="@+id/associatedDevices"
+        android:layout_below="@+id/deviceName"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/deviceType"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mac"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/deviceType"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/deviceMac"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manufacturer"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/deviceMac"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/deviceManuf"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manufacturer"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/deviceManuf"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/deviceSignal"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@id/associatedDevicesHeader"
-        />
+        android:layout_marginTop="10dp"
+        android:id="@+id/rvAssociatedDevices"/>
 
 
 </RelativeLayout>

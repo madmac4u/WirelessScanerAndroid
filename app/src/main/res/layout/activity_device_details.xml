@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Manufacturer"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/deviceMac"
         android:layout_alignParentRight="true"
         android:textSize="20sp"
@@ -114,7 +114,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manufacturer"
+        android:text="Signal"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/deviceManuf"
         android:layout_alignParentRight="true"

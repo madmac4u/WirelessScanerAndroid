@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="#DAD2FA"
     android:id="@+id/ap_item_row_layout"
-    android:padding="8dp">
+    android:padding="10dp">
 
 
     <TextView
@@ -14,9 +14,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/devNameAP"
         android:layout_marginLeft="8dp"
-        android:layout_centerVertical="true"
         android:textStyle="italic|bold"
         android:text="Device Name"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/devSignal"
+        android:layout_below="@+id/devNameAP"
+        android:layout_marginLeft="8dp"
+        android:text="signal"
         android:textColor="#000000"
         android:textSize="20sp"/>
 

@@ -15,7 +15,7 @@ import online.cyberforensic.wirelessscannerandroid.model.Device;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
-    Device[] devices;
+    private static Device[] devices;
     private Context context;
     private OnItemClickListener mListener;
 
@@ -50,7 +50,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.manuf.setText(device.getKismetDeviceBaseManuf());
         holder.type.setText(device.getKismetDeviceBaseType());
         holder.mac.setText(device.getKismetDeviceBaseMacaddr());
-
+        holder.signal.setText(device.getKismetDeviceBaseSignal().getKismetCommonSignalLastSignal().toString());
     }
 
     @Override
@@ -58,8 +58,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return devices.length;
     }
 
+
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView name, manuf,type,mac;
+        TextView name, manuf,type,mac,signal;
         RelativeLayout relativeLayout;
 
 
@@ -70,6 +71,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             manuf = itemView.findViewById(R.id.devManufAP);
             type = itemView.findViewById(R.id.devTypeAP);
             mac = itemView.findViewById(R.id.devMacAP);
+            signal = itemView.findViewById(R.id.devSignal);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {

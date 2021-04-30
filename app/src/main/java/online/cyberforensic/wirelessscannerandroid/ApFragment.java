@@ -55,7 +55,7 @@ public class ApFragment extends Fragment implements RecyclerAdapter.OnItemClickL
                 recyclerView.setAdapter(recyclerAdapter);
                 recyclerAdapter.setOnItemClickListener(ApFragment.this::onItemClick);
                 recyclerView.addItemDecoration(dividerItemDecoration);
-                recyclerAdapter.notifyDataSetChanged();
+
             }
 
         });
