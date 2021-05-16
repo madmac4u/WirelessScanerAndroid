@@ -30,8 +30,8 @@ public class BackgroundTask<deviceArray> {
     public static final String EXTRA_DEVICE_SIGNAL = "devSignal";
 
     private String json_url = "http://10.0.0.1:2501/devices/views/all/devices.json";
-    private String USERNAME = "kali";
-    private String PASSWORD = "kali";
+    private String USERNAME = "user";
+    private String PASSWORD = "user";
 
     Context context;
     Device[] deviceArray,finalDeviceArray;
